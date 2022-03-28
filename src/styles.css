@@ -1,3 +1,13 @@
 .small-flag{
   width: 50px;
 }
+
+.sidebarStyle{
+  background-color: #0a58ca;
+    color: #ffffff;
+    padding: 10px;
+}
+
+h3.title{
+  color: #0a58ca;
+}

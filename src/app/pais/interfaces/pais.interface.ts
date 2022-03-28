@@ -1,6 +1,8 @@
 export interface Country {
   name:         Name;
+  //name:         string;
   tld:          string[];
+  alpha2Code:   string;
   cca2:         string;
   ccn3:         string;
   cca3:         string;
@@ -30,6 +32,7 @@ export interface Country {
   timezones:    string[];
   continents:   string[];
   flags:        CoatOfArms;
+  //flags:        string;
   coatOfArms:   CoatOfArms;
   startOfWeek:  string;
   capitalInfo:  CapitalInfo;

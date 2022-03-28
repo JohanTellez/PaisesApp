@@ -1,29 +1,32 @@
-<h2>Ver país</h2>
+<div class="animate__animated animate__fadeIn animate__faster">
 
-<div *ngIf="!pais; else divPais" class="alert alert-info">
-  Espere un momento, por favor
+  <h3 class="title">Ver país</h3>
+
+  <div *ngIf="!pais; else divPais" class="alert alert-info">
+    Espere un momento, por favor
+  </div>
+
+  <ng-template #divPais>
+    <div class="row">
+      <div class="col-12">
+        <h1>País: <small>{{pais.name}}</small> </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <h3>Bandera</h3>
+        <img [src]="pais.flag" class="img-thumbnail">
+      </div>
+      <div>
+        <h3>Información</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Población</strong> {{pais.population|number}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
 </div>
-
-<ng-template #divPais>
-  <div class="row">
-    <div class="col-12">
-      <h1>País: <small>{{pais.name}}</small> </h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <h3>Bandera</h3>
-      <img [src]="pais.flags" class="img-thumbnail">
-    </div>
-    <div>
-      <h3>Información</h3>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <strong>Población</strong> {{pais.population|number}}
-        </li>
-      </ul>
-    </div>
-  </div>
-</ng-template>
 
 
